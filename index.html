@@ -3,10 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Andrey Liulin Test Task</title>
   </head>
   <body>
-    <script src="main.js"></script>
+    <main class="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 offset-md-1">
+            <img src="img/image.svg" class="image img-fluid" alt="form" />
+            <p class="text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              rhoncus tellus eu quam maximus pellentesque. Aliquam eros massa,
+              laoreet non ligula non, hendrerit condimentum neque. Maecenas sit
+              amet enim auctor, aliquet nisl vitae, ornare ante. Donec tristique
+              lacus lectus, sed feugiat enim imperdiet vel. Ut consequat nisi ut
+              auctor ornare. Etiam cursus enim eget suscipit.
+            </p>
+          </div>
+          <div class="col-md-4 offset-md-1 form">
+            <form class="form__wrapper">
+              <input
+                type="text"
+                name="first_name"
+                class="form__input"
+                placeholder="First Name"
+                minlength="2"
+                maxlength="50"
+                pattern="^[a-zA-Z]+$"
+                required
+              />
+              <p class="form__message">
+                at least 2 characters (only latin letters)
+              </p>
+              <input
+                type="text"
+                name="last_name"
+                class="form__input"
+                placeholder="Last Name"
+                minlength="2"
+                maxlength="50"
+                pattern="^[a-zA-Z]+$"
+                required
+              />
+              <p class="form__message">
+                at least 2 characters (only latin letters)
+              </p>
+              <input
+                type="email"
+                class="form__input"
+                placeholder="Email"
+                minlength="5"
+                maxlength="62"
+                pattern="^([^ ]+@[^ ]+\.[a-z]{2,6}|)$"
+                required
+              />
+              <p class="form__message">enter email as example@mail.com</p>
+              <div class="form__group">
+                <select id="country" class="form__input form__input--select">
+                  <option value="ua">UA +380</option>
+                  <option value="pl">PL +380</option>
+                  <option value="at">AT +43</option>
+                </select>
+                <input
+                  id="phone"
+                  type="tel"
+                  class="form__input"
+                  placeholder="Phone"
+                  required
+                />
+              </div>
+              <button type="submit" class="form__btn">Send Data</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
